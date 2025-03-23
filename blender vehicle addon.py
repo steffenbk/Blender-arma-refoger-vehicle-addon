@@ -1677,7 +1677,9 @@ class ARVEHICLES_OT_separate_components(bpy.types.Operator):
             prefix = "door_"
         elif self.component_type == 'accessory':
             prefix = "acc_"
-        
+        elif self.component_type == 'Wheel':
+            prefix = "Wheel_"        
+            
         new_name = self.custom_name
         if not new_name:
             new_name = f"{prefix}{obj.name}"
