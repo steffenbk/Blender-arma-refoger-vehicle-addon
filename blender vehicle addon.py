@@ -1904,7 +1904,7 @@ classes = (
     ARVEHICLES_OT_create_empties,
     ARVEHICLES_OT_separate_components,
     ARVEHICLES_OT_parent_to_armature,
-    ARVEHICLES_OT_setup_layer_presets,
+    
     ARVEHICLES_OT_setup_export,
     ARVEHICLES_PT_panel,
 )
