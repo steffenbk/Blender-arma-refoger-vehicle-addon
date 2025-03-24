@@ -594,7 +594,7 @@ class ARVEHICLES_OT_create_firegeo_collision(bpy.types.Operator):
             ('CONVEX', "Convex Hull (Stable)", "Create a simplified convex hull - stable even with high-poly models"),
             ('DETAILED', "Detailed (Better Shape)", "Create a more detailed shape that better preserves features - may crash with very high-poly models"),
         ],
-        default='CONVEX'
+        default='DETAILED'
     )
     
     # Parameters for Convex Hull method
@@ -603,7 +603,7 @@ class ARVEHICLES_OT_create_firegeo_collision(bpy.types.Operator):
         description="Maximum number of faces for convex hull method",
         default=200,
         min=20,
-        max=800
+        max=100000
     )
     
     # Parameters for Detailed method
@@ -612,7 +612,7 @@ class ARVEHICLES_OT_create_firegeo_collision(bpy.types.Operator):
         description="Target number of faces for detailed method",
         default=200,
         min=50,
-        max=1000
+        max=1000000
     )
     
     preserve_details: bpy.props.BoolProperty(
